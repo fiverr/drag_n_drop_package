@@ -1,0 +1,27 @@
+@import '../sass-assets/colors.scss';
+
+.gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    opacity: 0.95;
+}
+
+.gu-hide {
+    display: none !important;
+}
+
+.gu-unselectable {
+    user-select: none !important;
+}
+
+.gu-transit {
+    &.fit-collapsable {
+        background-color: $bg_header_offwhite !important;
+        border: 1px dashed $bg_header_grey_med !important;
+
+        *, &:before, &:after {
+            visibility: hidden;
+        }
+    }
+}

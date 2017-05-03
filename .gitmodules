@@ -1,0 +1,3 @@
+[submodule "sass-assets"]
+	path = sass-assets
+	url = git@github.com:fiverr/sass-assets.git
