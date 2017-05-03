@@ -7,7 +7,9 @@
     "build": "npm run clean && npm run build-webpack",
     "build-webpack": "webpack --config webpack.config.js",
     "clean": "rimraf dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {},
   "author": "Asaf David <asaf.d@fiverr.com>",
@@ -36,6 +38,7 @@
     "react-dom": "15.4.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "@kadira/storybook": "^2.21.0"
   }
 }
