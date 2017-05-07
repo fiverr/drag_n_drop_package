@@ -2,7 +2,7 @@ import React from 'react';
 import Dragula from 'react-dragula';
 import './drag-n-drop.scss';
 
-class drag_n_drop extends React.Component {
+class DragAndDrop extends React.Component {
     constructor() {
         super();
 
@@ -32,7 +32,7 @@ class drag_n_drop extends React.Component {
     getEleIndex(element) {
         const elementSiblings = Array.prototype.slice.call(element.parentNode.children);
 
-        return elementSiblings.indexOf(element); // work with sort_id
+        return elementSiblings.indexOf(element);
     }
 
     initDragula() {
@@ -110,4 +110,4 @@ class drag_n_drop extends React.Component {
     }
 }
 
-export default drag_n_drop;
+export default DragAndDrop;
