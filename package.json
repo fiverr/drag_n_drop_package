@@ -1,6 +1,6 @@
 {
   "name": "@fiverr/drag_n_drop",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React drag and drop component",
   "main": "dist/index.js",
   "scripts": {
