@@ -1,4 +1,3 @@
-import React from 'react';
 import Dragula from 'react-dragula';
 import './drag-n-drop.scss';
 

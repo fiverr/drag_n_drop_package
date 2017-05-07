@@ -1,4 +1,3 @@
-import React from 'react';
 import DragDrop from '../src/index';
 
 class DragDropWrapper extends React.Component {
@@ -36,7 +35,8 @@ const styles = {
     item: {
         border: '1px solid black',
         margin: '20px',
-        padding: '10px'
+        padding: '10px',
+        backgroundColor: 'lightgray'
     }
 };
 

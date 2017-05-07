@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 // you can use this file to add your custom webpack plugins, loaders and anything you like.
 // This is just the basic way to add addional webpack configurations.
 // For more information refer the docs: https://getstorybook.io/docs/configurations/custom-webpack-config
@@ -8,7 +10,9 @@
 
 module.exports = {
   plugins: [
-    // your custom plugins
+    new webpack.ProvidePlugin({
+      react: 'React'
+    })
   ],
   module: {
     loaders: [
@@ -16,6 +20,6 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style!raw!sass'
       }
-    ],
-  },
+    ]
+  }
 };

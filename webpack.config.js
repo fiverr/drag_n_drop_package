@@ -29,5 +29,8 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('styles.css')
-    ]
+    ],
+    externals: {
+        react: 'React'
+    }
 };
