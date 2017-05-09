@@ -1,4 +1,5 @@
-import DragDrop from '../src/index';
+import DragDrop from '../dist/';
+import '../dist/drag-n-drop.css';
 
 class DragDropWrapper extends React.Component {
     constructor() {
