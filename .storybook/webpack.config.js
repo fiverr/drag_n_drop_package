@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webpack = require('@kadira/storybook/node_modules/webpack');
 
 // you can use this file to add your custom webpack plugins, loaders and anything you like.
 // This is just the basic way to add addional webpack configurations.
@@ -17,7 +17,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.scss$/,
+        test: /(\.css$)|(\.scss$)/,
         loader: 'style!raw!sass'
       }
     ]
