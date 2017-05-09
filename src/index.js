@@ -1,5 +1,4 @@
 import Dragula from 'react-dragula';
-import './drag-n-drop.scss';
 
 class DragAndDrop extends React.Component {
     constructor() {
