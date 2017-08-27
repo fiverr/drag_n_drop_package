@@ -1,6 +1,8 @@
 import Dragula from 'react-dragula';
 
-class DragAndDrop extends React.Component {
+const getEleIndex = (element) => [].indexOf.call(element.parentNode.children, element);
+
+class DragAndDrop extends React.Component { // eslint-disable-line no-undef
     constructor() {
         super();
 
@@ -18,19 +20,11 @@ class DragAndDrop extends React.Component {
     }
 
     clearOnDrop() {
-        const bodyClasses = document.body.getAttribute('class').replace(/dd-no-drop/g, '');
-
-        document.body.setAttribute('class', bodyClasses.trim());
+        document.body.classList.remove('dd-no-drop');
 
         this.setState({
             dragInProgress: false
         });
-    }
-
-    getEleIndex(element) {
-        const elementSiblings = Array.prototype.slice.call(element.parentNode.children);
-
-        return elementSiblings.indexOf(element);
     }
 
     initDragula() {
@@ -41,16 +35,15 @@ class DragAndDrop extends React.Component {
         } = this.props;
 
         const containers = [this.dragulaDecorator],
-            clearOnDrop = this.clearOnDrop,
-            getEleIndex = this.getEleIndex;
+            clearOnDrop = this.clearOnDrop.bind(this);
 
-        const drake = Dragula(containers, {
+        const drake = Dragula(containers, { // eslint-disable-line new-cap
             moves: (item, container, target) => {
                 // check if the element has drag and drop specific class - and only then enable drag
                 if (typeof moves === 'function') {
                     return moves(target);
                 } else {
-                    return (` ${target.className} `).indexOf(' drag-drop-target ') > -1;
+                    return target.className.includes('drag-drop-target');
                 }
             },
             accepts: (item, target, source, sibling) => {
@@ -84,21 +77,11 @@ class DragAndDrop extends React.Component {
             clearOnDrop();
         });
 
-        drake.on('dragend', () => {
-            clearOnDrop();
-        });
+        drake.on('dragend', clearOnDrop);
 
-        drake.on('out', () => {
-            let bodyClasses = document.body.getAttribute('class');
+        drake.on('out', () => document.body.classList.add('dd-no-drop'));
 
-            bodyClasses += ' dd-no-drop';
-
-            document.body.setAttribute('class', bodyClasses);
-        });
-
-        drake.on('over', () => {
-            clearOnDrop();
-        });
+        drake.on('over', clearOnDrop);
     }
 
     render() {
