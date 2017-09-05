@@ -1,18 +1,23 @@
 {
   "name": "@fiverr/drag_n_drop",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React drag and drop component",
   "main": "dist/index.js",
   "scripts": {
+    "prepare": "yarn config set registry https://registry.npmjs.org",
     "build": "npm run clean && npm run build-js && npm run build-sass",
     "build-js": "babel src --out-dir dist",
     "build-sass": "node-sass src/ -o dist/ ",
-    "clean": "rimraf dist",
-    "prepublish": "npm run build",
+    "clean": "./node_modules/rimraf/bin.js dist",
+    "prepublishOnly": "npm run build",
+    "eslint": "./node_modules/eslint/bin/eslint.js -c .eslintrc ./src/**/*.js --ignore-path .eslintignore --quiet",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fiverr/drag_n_drop_package.git"
+  },
   "author": "Asaf David <asaf.d@fiverr.com>",
   "license": "ISC",
   "dependencies": {
@@ -24,22 +29,22 @@
     "rimraf": "^2.6.1"
   },
   "peerDependencies": {
-    "react": "15.4.1",
-    "react-dom": "15.4.1"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   },
   "devDependencies": {
-    "@fiverr/eslint-config-fiverr": "^0.0.12",
+    "@fiverr/eslint-config-fiverr": "^0.0.13",
+    "@kadira/storybook": "^2.21.0",
     "babel-loader": "^7.0.0",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.5.2",
     "raw-loader": "^0.5.1",
-    "react": "15.4.1",
-    "react-dom": "15.4.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",
-    "webpack": "^2.4.1",
-    "@kadira/storybook": "^2.21.0"
+    "webpack": "^2.4.1"
   }
 }
