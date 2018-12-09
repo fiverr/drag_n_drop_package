@@ -1,5 +1,5 @@
 {
-  "name": "@fiverr/drag_n_drop",
+  "name": "@fiverr-private/drag_n_drop",
   "version": "0.0.5",
   "description": "React drag and drop component",
   "main": "dist/index.js",
