@@ -1,10 +1,10 @@
 {
-  "name": "@fiverr/drag_n_drop",
+  "name": "@fiverr-private/drag_n_drop",
   "version": "0.0.5",
   "description": "React drag and drop component",
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "yarn config set registry https://registry.npmjs.org",
+    "prepare": "git submodule update --init",
     "build": "npm run clean && npm run build-js && npm run build-sass",
     "build-js": "babel src --out-dir dist",
     "build-sass": "node-sass src/ -o dist/ ",

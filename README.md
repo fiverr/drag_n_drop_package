@@ -20,10 +20,10 @@ Each direct child of the `DragAndDrop` component will be draggable, while the dr
 ## Instalation
 Vian npm:
 ```
-npm install @fiverr/drag_n_drop_package
+npm install @fiverr-private/drag_n_drop_package
 ```
 
 Via yarn:
 ```
-yarn add @fiverr/drag_n_drop_package
+yarn add @fiverr-private/drag_n_drop_package
 ```
