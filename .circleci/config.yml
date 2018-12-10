@@ -12,6 +12,9 @@ jobs:
           name: Set npmrc credentials
           command: echo -e $NPMRC > ~/.npmrc
       - run:
+          name: Run lint
+          command: npm run eslint
+      - run:
           name: Install dependencies
           command: npm i
       - run:
