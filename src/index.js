@@ -1,3 +1,4 @@
+import React from 'react';
 import Dragula from 'react-dragula';
 
 const getEleIndex = (element) => [].indexOf.call(element.parentNode.children, element);
