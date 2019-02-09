@@ -1,5 +1,4 @@
 import React from 'react';
-import Dragula from 'react-dragula';
 
 const getEleIndex = (element) => [].indexOf.call(element.parentNode.children, element);
 
@@ -17,7 +16,8 @@ class DragAndDrop extends React.Component { // eslint-disable-line no-undef
     }
 
     componentDidMount() {
-        this.initDragula();
+        const Dragula = require('react-dragula');
+        this.initDragula(Dragula);
     }
 
     clearOnDrop() {
@@ -28,7 +28,7 @@ class DragAndDrop extends React.Component { // eslint-disable-line no-undef
         });
     }
 
-    initDragula() {
+    initDragula(Dragula) {
         const {
             onDrop,
             moves,
