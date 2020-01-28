@@ -1,6 +1,6 @@
 {
   "name": "@fiverr-private/drag_n_drop",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React drag and drop component",
   "main": "dist/index.js",
   "scripts": {
@@ -29,16 +29,17 @@
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
+    "@fiverr/eslint-config-fiverr": "^0.0.13",
+    "@kadira/storybook": "^2.21.0",
     "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "@fiverr/eslint-config-fiverr": "^0.0.13",
-    "@kadira/storybook": "^2.21.0",
-    "babel-loader": "^7.0.0",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "^2.1.0",
+    "lodash": "^4.17.15",
     "node-sass": "^4.5.2",
     "raw-loader": "^0.5.1",
     "react": "^15.4.1",

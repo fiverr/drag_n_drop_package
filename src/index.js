@@ -44,7 +44,7 @@ class DragAndDrop extends React.Component { // eslint-disable-line no-undef
                 if (typeof moves === 'function') {
                     return moves(target);
                 } else {
-                    return target.className.includes('drag-drop-target');
+                    return _.includes(target.className, 'drag-drop-target');
                 }
             },
             accepts: (item, target, source, sibling) => {
