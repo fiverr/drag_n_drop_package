@@ -4,6 +4,7 @@
   "description": "React drag and drop component",
   "main": "dist/index.js",
   "scripts": {
+    "preinstall": "echo 'hi from pr'",
     "prepare": "git submodule update --init",
     "build": "npm run clean && npm run build-js && npm run build-sass",
     "build-js": "babel src --out-dir dist",
